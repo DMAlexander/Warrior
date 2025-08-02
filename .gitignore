@@ -1,0 +1,115 @@
+# UE5 - Unreal Engine 5 gitignore
+
+# Ignore user-specific and system files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.opensdf
+*.sdf
+*.db
+*.log
+*.orig
+*.swp
+*.tmp
+
+# macOS / Linux
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Ignore engine-specific folders and files
+DerivedDataCache/
+Saved/
+Intermediate/
+Build/
+Binaries/
+
+# Ignore config files that shouldn't be tracked per user
+*.local
+*.launch
+*.log
+*.tlog
+*.csproj
+*.VC.db
+*.VC.opendb
+*.xcodeproj
+*.xcworkspace
+
+# Ignore compiled assets
+*.pdb
+*.obj
+*.exe
+*.dll
+*.lib
+*.app
+*.ipa
+*.dylib
+*.so
+*.a
+
+# Ignore crash reports
+CrashReportClient/
+
+# Ignore Unreal-specific files
+.vscode/
+*.opensdf
+*.sdf
+*.suo
+*.ipch
+*.aps
+*.ncb
+*.ilk
+*.iobj
+*.iuser
+*.rsp
+*.exp
+*.log
+*.tlog
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore plugin binaries
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# Ignore asset backups
+*_BuiltData.uasset
+*_BuiltData.ubulk
+
+# Ignore compiled Blueprint data
+*.uasset
+*.umap
+
+# If you use Rider or CLion
+.idea/
+
+# Ignore AutoSDK setups (engine-related)
+Engine/Extras/ThirdPartyNotUE/AutoSDK/
+
+# Optional: ignore compiled content (if you don't want large files in repo)
+# Comment this out if you want to track your .uasset and .umap files.
+# Content/**/*.uasset
+# Content/**/*.umap
+
+# Optional: ignore P4 metadata
+.p4ignore
+.p4config
+
+# Optional: ignore generated project files
+*.xcodeproj
+*.xcworkspace
+*.sln
+*.suo
+
+# Optional: ignore node_modules if you use Web UI (like Pixel Streaming frontend)
+node_modules/
