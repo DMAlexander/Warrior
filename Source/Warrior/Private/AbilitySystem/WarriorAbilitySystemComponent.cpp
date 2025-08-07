@@ -2,6 +2,7 @@
 
 
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
+#include "Items/Weapons/WarriorHeroWeapon.h"
 #include "AbilitySystem/Abilities/WarriorGameplayAbility.h"
 
 void UWarriorAbilitySystemComponent::OnAbilityInputPressed(const FGameplayTag &InInputTag)
@@ -43,20 +44,13 @@ void UWarriorAbilitySystemComponent::GrantHeroWeaponAbilities(const TArray<FWarr
     }
 }
 
-void UWarriorAbilitySystemComponent::RemovedGrantedHeroWeaponAbilities(UPARAM(ref) TArray<FGameplayAbilitySpecHandle> &InSpecHandlesToRemove)
+void UWarriorAbilitySystemComponent::RemovedGrantedHeroWeaponAbilities(AWarriorHeroWeapon* Weapon)
 {
-    if (InSpecHandlesToRemove.IsEmpty())
+    TArray<FGameplayAbilitySpecHandle>& GrantedAbilitySpecHandles = Weapon->GetGrantedAbilitySpecHandles();
+    for (auto GrantedAbilitySpecHandle : GrantedAbilitySpecHandles)
     {
-        return;
+        ClearAbility(GrantedAbilitySpecHandle);
     }
 
-    for (const FGameplayAbilitySpecHandle& SpecHandle : InSpecHandlesToRemove)
-    {
-        if (SpecHandle.IsValid())
-        {
-            ClearAbility(SpecHandle);
-        }
-    }
-
-    InSpecHandlesToRemove.Empty();
+    GrantedAbilitySpecHandles.Empty();
 }

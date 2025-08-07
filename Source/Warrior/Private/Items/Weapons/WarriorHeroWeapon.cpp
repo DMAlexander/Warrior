@@ -8,7 +8,7 @@ void AWarriorHeroWeapon::AssignGrantedAbilitySpecHandles(const TArray<FGameplayA
     GrantedAbilitySpecHandles = InSpecHandles;
 }
 
-TArray<FGameplayAbilitySpecHandle> AWarriorHeroWeapon::GetGrantedAbilitySpecHandles() const
+TArray<FGameplayAbilitySpecHandle>& AWarriorHeroWeapon::GetGrantedAbilitySpecHandles()
 {
-    return TArray<FGameplayAbilitySpecHandle>();
+    return GrantedAbilitySpecHandles;
 }
