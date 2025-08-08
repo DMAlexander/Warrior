@@ -49,7 +49,7 @@ void AWarriorWeaponBase::OnCollisionBoxEndOverlap(UPrimitiveComponent *Overlappe
 	{
 		if (WeaponOwningPawn != HitPawn)
 		{
-			Debug::Print(GetName() + TEXT(" end overlap with") + HitPawn->GetName(),FColor::Green);
+			Debug::Print(GetName() + TEXT(" end overlap with") + HitPawn->GetName(),FColor::Red);
 		}
 
 		//TODO:Implement hit check for enemy characters
