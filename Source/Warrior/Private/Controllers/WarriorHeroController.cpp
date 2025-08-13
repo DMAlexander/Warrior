@@ -8,7 +8,7 @@ AWarriorHeroController::AWarriorHeroController()
     HeroTeamID = FGenericTeamId(0);
 }
 
-FGenericTeamId AWarriorHeroController::GetGenericTeam() const
+FGenericTeamId AWarriorHeroController::GetGenericTeamId() const
 {
     return HeroTeamID;
 }
