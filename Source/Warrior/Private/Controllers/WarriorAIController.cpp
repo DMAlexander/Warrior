@@ -70,7 +70,7 @@ void AWarriorAIController::OnEnemyPerceptionUpdated(AActor *Actor, FAIStimulus S
 {
     if (UBlackboardComponent* BlackboardComponent = GetBlackboardComponent())
     {
-        Debug::Print(Actor->GetActorNameOrLabel() + TEXT(" was sensed"),FColor::Green);
+//        Debug::Print(Actor->GetActorNameOrLabel() + TEXT(" was sensed"),FColor::Green);
         if (!BlackboardComponent->GetValueAsObject(FName("TargetActor")))
         {
             if(Stimulus.WasSuccessfullySensed() && Actor)
