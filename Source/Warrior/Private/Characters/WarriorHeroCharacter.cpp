@@ -92,7 +92,7 @@ void AWarriorHeroCharacter::SetupPlayerInputComponent(UInputComponent *PlayerInp
     WarriorInputComponent->BindNativeInputAction(InputConfigDataAsset,WarriorGameplayTags::InputTag_SwitchTarget,ETriggerEvent::Triggered,this,&ThisClass::Input_SwitchTargetTriggered);
     WarriorInputComponent->BindNativeInputAction(InputConfigDataAsset,WarriorGameplayTags::InputTag_SwitchTarget,ETriggerEvent::Completed,this,&ThisClass::Input_SwitchTargetCompleted);
 
-    WarriorInputComponent->BindAbilityInputAction(InputConfigDataAsset,this,&ThisClass::Input_AbilityInputPressed,&ThisClass::Input_AbilityInputPressed);
+    WarriorInputComponent->BindAbilityInputAction(InputConfigDataAsset,this,&ThisClass::Input_AbilityInputPressed,&ThisClass::Input_AbilityInputReleased);
 }
 
 void AWarriorHeroCharacter::BeginPlay()
@@ -156,10 +156,10 @@ void AWarriorHeroCharacter::Input_SwitchTargetCompleted(const FInputActionValue 
 
 void AWarriorHeroCharacter::Input_AbilityInputPressed(FGameplayTag InInputTag)
 {
-    WarriorAbilitySystemComponent->OnAbilityInputPressed(InInputTag);
+	WarriorAbilitySystemComponent->OnAbilityInputPressed(InInputTag);
 }
 
 void AWarriorHeroCharacter::Input_AbilityInputReleased(FGameplayTag InInputTag)
 {
-    WarriorAbilitySystemComponent->OnAbilityInputReleased(InInputTag);
+	WarriorAbilitySystemComponent->OnAbilityInputReleased(InInputTag);
 }
