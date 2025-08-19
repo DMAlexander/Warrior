@@ -81,7 +81,7 @@ void AWarriorEnemyCharacter::PossessedBy(AController *NewController)
 #if WITH_EDITOR
 void AWarriorEnemyCharacter::PostEditChangeProperty(FPropertyChangedEvent &PropertyChangedEvent)
 {
-    super::PostEditChangeProperty(PropertyChangedEvent);
+    Super::PostEditChangeProperty(PropertyChangedEvent);
 
     if (PropertyChangedEvent.GetMemberPropertyName() == GET_MEMBER_NAME_CHECKED(ThisClass,LeftHandCollisionBoxAttachBoneName))
     {
