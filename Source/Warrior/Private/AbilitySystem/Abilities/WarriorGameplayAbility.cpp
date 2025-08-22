@@ -5,6 +5,8 @@
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
 #include "Components/Combat/PawnCombatComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "WarriorFunctionLibrary.h"
+#include "WarriorGameplayTags.h"
 
 void UWarriorGameplayAbility::OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec)
 {
@@ -63,7 +65,6 @@ FActiveGameplayEffectHandle UWarriorGameplayAbility::BP_ApplyEffectSpecHandleToT
 	return ActiveGameplayEffectHandle;
 }
 
-/*
 void UWarriorGameplayAbility::ApplyGameplayEffectSpecHandleToHitResults(const FGameplayEffectSpecHandle& InSpecHandle, const TArray<FHitResult>& InHitResults)
 {
 	if (InHitResults.IsEmpty())
@@ -97,4 +98,3 @@ void UWarriorGameplayAbility::ApplyGameplayEffectSpecHandleToHitResults(const FG
 		}
 	}
 }
-*/
