@@ -2,7 +2,6 @@
 
 
 #include "GameModes/WarriorSurvivalGameMode.h"
-#include "WarriorSurvivalGameMode.h"
 
 void AWarriorSurvivalGameMode::BeginPlay()
 {
@@ -11,7 +10,7 @@ void AWarriorSurvivalGameMode::BeginPlay()
 
 void AWarriorSurvivalGameMode::Tick(float DeltaTime)
 {
-    Super::Tick();
+    Super::Tick(DeltaTime);
 }
 
 void AWarriorSurvivalGameMode::SetCurrentSurvivalGameModeState(EWarriorSurvivalGameModeState InState)
